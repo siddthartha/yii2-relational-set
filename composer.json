@@ -1,0 +1,13 @@
+{
+    "name": "siddthartha/yii2-relative-set-behavior",
+    "description": "Represents Yii2 m2m junction relation as PK-array field",
+    "require": {
+        "yiisoft/yii2-app-advanced": "^2.0"
+    },
+    "authors": [
+        {
+            "name": "Anton Sadovnikoff",
+            "email": "sadovnikoff@gmail.com"
+        }
+    ]
+}
