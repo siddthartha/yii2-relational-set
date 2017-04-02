@@ -1,5 +1,5 @@
 <?php
-namespace siddthartha\behaviors\relativeSet\tests\unit;
+namespace siddthartha\tests\unit;
 
 use yii\console\Application;
 

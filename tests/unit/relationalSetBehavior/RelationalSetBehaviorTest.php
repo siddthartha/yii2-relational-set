@@ -7,7 +7,7 @@
 
 namespace siddthartha\tests\unit\relationalSetBehavior;
 
-class RelationalSetBehaviorTest extends BaseTestCase {
+class RelationalSetBehaviorTest extends \siddthartha\tests\unit\BaseTestCase {
 
 	/**
 	 * @inheritdoc
