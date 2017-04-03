@@ -2,7 +2,8 @@
     "name": "siddthartha/yii2-relational-set",
     "description": "Represents Yii2 m2m junction relation as PK-array field",
     "require": {
-        "yiisoft/yii2": "~2.0.0"
+        "yiisoft/yii2": "~2.0.0",
+        "yii2tech/filedb": "^1.0"
     },
     "authors": [
         {
@@ -12,7 +13,8 @@
     ],
     "autoload": {
         "psr-4": {
-            "siddthartha\\behaviors\\": "behaviors"
+            "siddthartha\\behaviors\\": "behaviors",
+            "siddthartha\\tests\\": "tests"
         }
     }
 }
