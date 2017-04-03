@@ -59,4 +59,4 @@ class Host extends \yii\db\ActiveRecord
 ```php
     <?=$form->field( $model, '_slaves')->checkboxList(/*...*/)?>
 ```
-Any changes to relation (junction table) will be executed as `insert` and/or `update` needed difference only! 
+Any changes to relation (junction table) will be executed as `insert` and/or `update` the needed difference only! 
