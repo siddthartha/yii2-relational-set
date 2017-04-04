@@ -65,7 +65,7 @@ class Arr extends \yii\helpers\BaseArrayHelper
     public static function rsLog(array $array, $relatedModel = null, array $arrayMap = ['id', 'name'])
     {
         return is_string($relatedModel) && class_exists($relatedModel)
-            ? self::log(\yii\helpers\ArrayHelper::map($relatedModel::findAll(['id' => $array]), $arrayMap[0], $arrayMap[1]))
+            ? self::log(self::map($relatedModel::findAll(['id' => $array]), $arrayMap[0], $arrayMap[1]))
             : self::log($array);
     }
 }
