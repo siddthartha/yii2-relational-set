@@ -11,8 +11,33 @@ namespace siddthartha\helpers;
  *
  * @author Anton Sadovnikoff <sadovnikoff@gmail.com>
  */
-class Arr
+class Arr extends \yii\helpers\BaseArrayHelper
 {
+    /**
+     * Get difference between two sets (arrays) as [added, removed] subsets
+     *
+     * @param mixed[] $actualStateArray
+     * @param mixed[] $inputStateArray
+     * @return [mixed[], mixed[]]
+     */
+    public static function completion($actualStateArray, $inputStateArray)
+    {
+        $addedValuesArray   = array_diff_assoc($inputStateArray, $actualStateArray);
+        $removedValuesArray = array_diff_assoc($actualStateArray, $inputStateArray);
+
+        return [$addedValuesArray, $removedValuesArray];
+    }
+
+    /**
+     *
+     * @param mixed $value
+     * @param mixed[] $templateArray
+     * @return mixed
+     */
+    public static function wrapBy($value, &$templateArray)
+    {
+        return self::getValue($templateArray, $value, $value);
+    }
 
     /**
      * Returns human readable array text-plain view
