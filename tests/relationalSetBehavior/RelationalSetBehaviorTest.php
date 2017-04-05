@@ -58,6 +58,11 @@ class RelationalSetBehaviorTest extends \siddthartha\tests\BaseTestCase
         $host2->_slaves = [4, 5, 6, 7, 8];
         $host1->save();
         $host2->save();
+        $host1->refresh();
+        $host2->refresh();
+
+        echo "\n" . Arr::rsLog($host1->_slaves, \siddthartha\tests\models\Slave::class);
+        echo "\n" . Arr::rsLog($host2->_slaves, \siddthartha\tests\models\Slave::class);
     }
 
 }
