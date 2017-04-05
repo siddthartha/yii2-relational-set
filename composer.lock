@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "1aae123b1bc5dddb048319a73f5a58c6",
-    "content-hash": "44d13a64e46b149c46e118b3ac919d11",
+    "hash": "6e8f2b3ec429f3247ff414f89e3041ca",
+    "content-hash": "4e78387642237707613770f1eec3053a",
     "packages": [
         {
             "name": "bower-asset/jquery",
@@ -261,6 +261,39 @@
             "time": "2017-03-13 06:30:53"
         },
         {
+            "name": "siddthartha/yii2-tools",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/siddthartha/yii2-tools.git",
+                "reference": "9d1715e2f6aceeef665c4046990ed346c63fdef7"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/siddthartha/yii2-tools/zipball/9d1715e2f6aceeef665c4046990ed346c63fdef7",
+                "reference": "9d1715e2f6aceeef665c4046990ed346c63fdef7",
+                "shasum": ""
+            },
+            "require": {
+                "yiisoft/yii2": "~2.0.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "siddthartha\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "authors": [
+                {
+                    "name": "Anton Sadovnikoff",
+                    "email": "sadovnikoff@gmail.com"
+                }
+            ],
+            "description": "Some Yii2 helpers",
+            "time": "2017-04-05 08:44:30"
+        },
+        {
             "name": "yiisoft/yii2",
             "version": "2.0.11.2",
             "source": {
@@ -414,7 +447,9 @@
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "siddthartha/yii2-tools": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": [],

@@ -26,7 +26,7 @@ class BaseTestCase extends \PHPUnit_Framework_TestCase
      */
     public function run(\PHPUnit_Framework_TestResult $result = null)
     {
-        $test_title[] = Console::ansiFormat(\siddthartha\helpers\Naming::shortClass(static::class), [Console::BG_CYAN]);
+        $test_title[] = Console::ansiFormat(\siddthartha\helpers\Name::shortClass(static::class), [Console::BG_CYAN]);
         $test_title[] = " -> ";
         $test_title[] = Console::ansiFormat(preg_replace("#^test[0-9]*#","",$this->getName()), [Console::BOLD]);
 
