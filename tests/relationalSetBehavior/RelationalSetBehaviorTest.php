@@ -18,10 +18,15 @@ class RelationalSetBehaviorTest extends \siddthartha\tests\BaseTestCase
         parent::setUp();
         $host1 = \siddthartha\tests\models\Host::findOne(['id' => 1]);
         $host2 = \siddthartha\tests\models\Host::findOne(['id' => 2]);
-        $host1->_slaves = [1, 3, 5];
-        $host2->_slaves = [6, 8, 10];
-        $host1->save();
-        $host2->save();
+
+        \siddthartha\tests\models\HostSlave::deleteAll();
+        $host1->link('slaves', \siddthartha\tests\models\Slave::findOne(['id' => 1]));
+        $host1->link('slaves', \siddthartha\tests\models\Slave::findOne(['id' => 3]));
+        $host1->link('slaves', \siddthartha\tests\models\Slave::findOne(['id' => 5]));
+        $host2->link('slaves', \siddthartha\tests\models\Slave::findOne(['id' => 6]));
+        $host2->link('slaves', \siddthartha\tests\models\Slave::findOne(['id' => 8]));
+        $host2->link('slaves', \siddthartha\tests\models\Slave::findOne(['id' => 10]));
+
     }
 
     public function testReadSet()
